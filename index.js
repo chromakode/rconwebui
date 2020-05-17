@@ -59,10 +59,10 @@ async function runTerminal(term) {
       }
 
       const output = respData.RconResponse && respData.RconResponse.Output
-      if (!output) {
-        localEcho.println(`unexpected data received: ${respData}`)
+      if (output === undefined) {
+        localEcho.println(`unexpected data received: ${JSON.stringify(respData.RconResponse.Output)}`)
       } else {
-        localEcho.println(respData.RconResponse.Output)
+        localEcho.println(output)
       }
     }
 
