@@ -1,0 +1,26 @@
+{
+  "name": "rconwebui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode=development -d -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Goodhart <c@chromakode.com>",
+  "license": "MIT",
+  "dependencies": {
+    "xterm": "^4.6.0",
+    "xterm-addon-fit": "^0.4.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.2.0",
+    "local-echo": "janstuemmel/local-echo#0e3b4f35f237c0a51bb11ff484a124704f5cf9a5",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
