@@ -3,9 +3,16 @@ import {Terminal} from 'xterm'
 import {FitAddon} from 'xterm-addon-fit'
 import LocalEchoController from 'local-echo'
 
+import csgoCommands from './commands.json'
+
 
 async function runTerminal(term) {
   const localEcho = new LocalEchoController(term, {historySize: 500})
+
+  localEcho.addAutocompleteHandler((index, tokens) => {
+    return csgoCommands
+  })
+
   if (localStorage.history) {
     const {entries, cursor} = JSON.parse(localStorage.history)
     localEcho.history.entries = entries || []
