@@ -43,6 +43,7 @@ async function runTerminal(term) {
         })
       } catch (err) {
         localEcho.println(`error: ${err}`)
+        continue
       }
 
       if (!resp.ok) {
